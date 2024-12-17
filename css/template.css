@@ -1,0 +1,144 @@
+/*-----------1. Сброс CSS (START)-----------*/
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+/*-----------1. Сброс CSS (END)-----------*/
+
+/*-----------2. Шрифты (START)-----------*/
+@font-face {
+  font-family: "MuseoSansCyrl";
+  src: url("../fonts/MuseoSansCyrl100.woff2") format("woff2"),
+    url("../fonts/MuseoSansCyrl100.woff") format("woff"),
+    url("../fonts/MuseoSansCyrl100.ttf") format("truetype"),
+    url("../fonts/MuseoSansCyrl100.eot") format("eot"); /* Для IE */
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MuseoSansCyrl";
+  src: url("../fonts/MuseoSansCyrl300.woff2") format("woff2"),
+    url("../fonts/MuseoSansCyrl300.woff") format("woff"),
+    url("../fonts/MuseoSansCyrl300.ttf") format("truetype"),
+    url("../fonts/MuseoSansCyrl300.eot") format("eot"); /* Для IE */
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "MuseoSansCyrl";
+  src: url("../fonts/MuseoSansCyrl700.woff2") format("woff2"),
+    url("../fonts/MuseoSansCyrl700.woff") format("woff"),
+    url("../fonts/MuseoSansCyrl700.ttf") format("truetype"),
+    url("../fonts/MuseoSansCyrl700.eot") format("eot"); /* Для IE */
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*-----------2. Шрифты (END)-----------*/
