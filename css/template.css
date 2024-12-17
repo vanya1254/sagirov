@@ -45,6 +45,9 @@ h6,
 p {
   font-size: inherit;
   font-weight: inherit;
+  margin-bottom: inherit;
+
+  line-height: normal;
 }
 
 ul,
@@ -263,3 +266,63 @@ body {
 }
 
 /*-----------4. Переменные (END)-----------*/
+
+/*-----------5. MAIN (START)-----------*/
+
+.main {
+  height: calc(var(--index) * 21.705426);
+
+  padding-left: var(--global-padding);
+  padding-right: var(--global-padding);
+}
+
+/*-----------5. MAIN (END)-----------*/
+
+/*-----------5. HERO (START)-----------*/
+
+.hero {
+  padding-top: calc(var(--index) * 1.472868);
+}
+
+.hero__left {
+}
+
+.hero__titles {
+  background: linear-gradient(
+    -90deg,
+    rgba(255, 63, 4, 1) 0%,
+    rgba(255, 255, 255, 1) 90%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.hero__title {
+  font-weight: 700;
+  font-size: 3.6rem;
+  text-transform: uppercase;
+  margin-bottom: -4px;
+}
+
+.hero__subtitle {
+  font-size: 1.5625rem;
+}
+
+.hero__btn {
+  width: fit-content;
+  font-size: 0.875rem;
+  padding: 11px 24px;
+  border: 1px solid transparent;
+  border-image: linear-gradient(
+      -171deg,
+      rgba(38, 62, 102, 1) 0%,
+      rgba(9, 33, 61, 1) 40%,
+      rgba(17, 31, 45, 1) 60%,
+      rgba(35, 89, 156, 1) 100%
+    )
+    1;
+}
+
+/*-----------5. HERO (END)-----------*/
