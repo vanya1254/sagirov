@@ -1,4 +1,5 @@
 /*-----------1. Сброс CSS (START)-----------*/
+
 * {
   padding: 0px;
   margin: 0px;
@@ -17,6 +18,7 @@ a,
 a:link,
 a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
@@ -108,9 +110,11 @@ label {
 legend {
   display: block;
 }
+
 /*-----------1. Сброс CSS (END)-----------*/
 
 /*-----------2. Шрифты (START)-----------*/
+
 @font-face {
   font-family: "MuseoSansCyrl";
   src: url("../fonts/MuseoSansCyrl100.woff2") format("woff2"),
@@ -142,3 +146,95 @@ legend {
 }
 
 /*-----------2. Шрифты (END)-----------*/
+
+/*-----------3. BODY (START)-----------*/
+
+html,
+body {
+  font-family: "MuseoSansCyrl", "sans-serif";
+  font-weight: 300;
+  line-height: 1;
+  color: #fff;
+
+  height: 100vh;
+
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+}
+
+/*-----------3. BODY (END)-----------*/
+
+/*-----------3. HEADER (START)-----------*/
+
+.header {
+  padding: 0px var(--global-padding);
+
+  background-color: rgba(21, 10, 1, 0.212);
+
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(152, 147, 147, 0.212);
+  -moz-box-shadow: 0px 0px 0px 1px rgba(152, 147, 147, 0.212);
+  box-shadow: 0px 0px 0px 1px rgba(152, 147, 147, 0.212);
+}
+
+.logo {
+  position: relative;
+
+  padding-top: calc(var(--index) * 1.007752);
+  padding-right: calc(var(--index) * 0.581395);
+  padding-bottom: calc(var(--index) * 1.550388);
+  padding-left: calc(var(--index) * 0.968992);
+
+  border-left: 1px solid rgba(152, 147, 147, 0.212);
+  border-right: 1px solid rgba(152, 147, 147, 0.212);
+}
+
+.logo__img {
+}
+
+.logo__angle {
+  position: absolute;
+  width: 0.4375rem;
+  height: 0.4375rem;
+}
+
+.logo__angle-lt {
+  top: 0;
+  left: 0;
+}
+.logo__angle-rt {
+  top: 0;
+  right: 0;
+}
+.logo__angle-rb {
+  bottom: 0;
+  right: 0;
+}
+.logo__angle-lb {
+  bottom: 0;
+  left: 0;
+}
+
+.header__nav {
+  flex-grow: 0.3924;
+}
+
+.header__link {
+  height: 1rem;
+
+  font-size: 1rem;
+  line-height: 1.375;
+  letter-spacing: -0.615px;
+}
+
+/*-----------3. HEADER (END)-----------*/
+
+/*-----------4. Переменные (START)-----------*/
+
+:root {
+  --index: calc(1vh + 1vw);
+  --global-padding: calc(var(--index) * 14.534883);
+}
+
+/*-----------4. Переменные (END)-----------*/
