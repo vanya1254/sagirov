@@ -167,6 +167,23 @@ body {
   background-size: cover;
 }
 
+body::after {
+  --diameter: calc(var(--index) * 15);
+  /* --diameter: 387px; */
+
+  position: absolute;
+  content: "";
+  width: var(--diameter);
+  height: var(--diameter);
+  border-radius: 50%;
+  top: calc(50% - (var(--diameter) / 2));
+  left: calc(50% - (var(--diameter) / 2));
+  background-color: transparent;
+  background-image: url("../images/background.jpg");
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
 /*-----------3. BODY (END)-----------*/
 
 /*-----------3. HEADER (START)-----------*/
