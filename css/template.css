@@ -325,4 +325,36 @@ body {
     1;
 }
 
+.hero__right {
+  display: grid;
+  grid-template-columns: repeat(2, calc(var(--index) * 7.170543));
+  grid-template-rows: repeat(2, calc(var(--index) * 7.170543));
+  row-gap: 10px;
+  gap: 10px;
+}
+
+.promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0.8;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.promo__text {
+  font-size: 1.125rem;
+  font-weight: 100;
+}
+
+.promo__accent-text {
+  font-size: 3.75rem;
+  font-weight: 700;
+}
+
+.promo__accent-text span {
+  font-size: 1.25rem;
+}
+
 /*-----------5. HERO (END)-----------*/
