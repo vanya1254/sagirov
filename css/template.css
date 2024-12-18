@@ -220,7 +220,7 @@ body {
 }
 
 .header__nav {
-  flex-grow: 0.3924;
+  flex-grow: 0.54;
 }
 
 .header__link {
@@ -285,6 +285,8 @@ body {
 }
 
 .hero__left {
+  position: relative;
+  margin-top: -153px;
 }
 
 .hero__titles {
@@ -303,7 +305,7 @@ body {
   font-weight: 700;
   font-size: 3.6rem;
   text-transform: uppercase;
-  margin-bottom: -4px;
+  margin-bottom: -8px;
 }
 
 .hero__subtitle {
@@ -311,6 +313,9 @@ body {
 }
 
 .hero__btn {
+  position: absolute;
+  bottom: -120px;
+
   width: fit-content;
   font-size: 0.875rem;
   padding: 11px 24px;
@@ -331,6 +336,8 @@ body {
   grid-template-rows: repeat(2, calc(var(--index) * 7.170543));
   row-gap: 10px;
   gap: 10px;
+
+  margin-right: -33px;
 }
 
 .promo {
@@ -351,6 +358,8 @@ body {
 .promo__accent-text {
   font-size: 3.75rem;
   font-weight: 700;
+  margin-bottom: -12px;
+  margin-top: 10px;
 }
 
 .promo__accent-text span {
