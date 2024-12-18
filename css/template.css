@@ -305,7 +305,7 @@ body {
   font-weight: 700;
   font-size: 3.6rem;
   text-transform: uppercase;
-  margin-bottom: -8px;
+  margin-bottom: -0.5rem;
 }
 
 .hero__subtitle {
@@ -337,7 +337,7 @@ body {
   row-gap: 10px;
   gap: 10px;
 
-  margin-right: -33px;
+  margin-right: -2rem;
 }
 
 .promo {
@@ -347,7 +347,29 @@ body {
   justify-content: center;
 
   opacity: 0.8;
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.01);
+
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+.promo:hover {
+  opacity: 1;
+  background: linear-gradient(
+    140deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(
+      140deg,
+      transparent 0%,
+      transparent 70%,
+      rgba(86, 89, 96, 0.8) 100%
+    )
+    1;
 }
 
 .promo__text {
@@ -358,8 +380,8 @@ body {
 .promo__accent-text {
   font-size: 3.75rem;
   font-weight: 700;
-  margin-bottom: -12px;
-  margin-top: 10px;
+  margin-bottom: -0.75rem;
+  margin-top: 0.625rem;
 }
 
 .promo__accent-text span {
