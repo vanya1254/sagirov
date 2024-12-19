@@ -163,13 +163,13 @@ body {
 
   background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 
 body::after {
-  --diameter: calc(var(--index) * 15);
-  /* --diameter: 387px; */
+  display: none;
 
   position: absolute;
   content: "";
@@ -178,10 +178,14 @@ body::after {
   border-radius: 50%;
   top: calc(50% - (var(--diameter) / 2));
   left: calc(50% - (var(--diameter) / 2));
+
   background-color: transparent;
   background-image: url("../images/background.jpg");
   background-position: 50%;
   background-repeat: no-repeat;
+  background-size: calc(var(--index) * 76);
+
+  pointer-events: none;
 }
 
 /*-----------3. BODY (END)-----------*/
@@ -258,7 +262,7 @@ body::after {
 .header__link::after {
   opacity: 0;
   position: absolute;
-  bottom: -8px;
+  bottom: -0.5rem;
   left: 0;
 
   content: "";
@@ -280,6 +284,7 @@ body::after {
 :root {
   --index: calc(1vh + 1vw);
   --global-padding: calc(var(--index) * 14.534883);
+  --diameter: calc(var(--index) * 15);
 }
 
 /*-----------4. Переменные (END)-----------*/
@@ -303,7 +308,7 @@ body::after {
 
 .hero__left {
   position: relative;
-  margin-top: -153px;
+  margin-top: -9.5625rem;
 }
 
 .hero__titles {
@@ -331,11 +336,11 @@ body::after {
 
 .hero__btn {
   position: absolute;
-  bottom: -120px;
+  bottom: -7.5rem;
 
   width: fit-content;
   font-size: 0.875rem;
-  padding: 11px 24px;
+  padding: 0.6875rem 1.5rem;
   border: 1px solid transparent;
   border-image: linear-gradient(
       -171deg,
@@ -413,3 +418,118 @@ body::after {
 }
 
 /*-----------5. HERO (END)-----------*/
+
+/*-----------6. Медиа-запросы (START)-----------*/
+
+@media (min-width: 1919px) and (max-width: 1921px) and (min-height: 659px) and (max-height: 661px) {
+  body::after {
+    display: block;
+  }
+}
+
+@media (max-width: 1600px) {
+  :root {
+    font-size: 14px;
+    --global-padding: calc(var(--index) * 12);
+  }
+
+  .logo {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero {
+    padding-top: calc(var(--index) * 5);
+  }
+}
+
+@media (max-width: 1440px) {
+  :root {
+    font-size: 12px;
+    --global-padding: calc(var(--index) * 10);
+  }
+
+  .logo img {
+    width: 17rem;
+  }
+
+  .hero {
+    padding-top: calc(var(--index) * 7);
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --global-padding: calc(var(--index) * 3);
+  }
+
+  .hero {
+    padding-top: calc(var(--index) * 9);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 10px;
+    --global-padding: calc(var(--index) * 1);
+  }
+
+  .hero {
+    padding-top: calc(var(--index) * 11);
+    flex-direction: column;
+  }
+
+  .hero__right {
+    margin-right: 0;
+    margin-top: 40%;
+
+    grid-template-columns: repeat(2, 10rem);
+    grid-template-rows: repeat(2, 10rem);
+  }
+}
+
+@media (max-width: 520px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .logo {
+    align-self: center;
+  }
+
+  .header__nav {
+    padding: 3%;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --global-padding: calc(var(--index) * 4);
+  }
+
+  .hero__left {
+    padding-top: 5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .logo {
+    align-self: center;
+  }
+
+  .header__nav {
+    display: grid !important;
+    grid-template-rows: auto auto;
+    row-gap: 1rem;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .hero__right {
+    margin-top: 60%;
+  }
+}
+
+/*-----------6. Медиа-запросы (END)-----------*/
