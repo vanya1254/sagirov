@@ -1,8 +1,8 @@
 /*-----------1. Сброс CSS (START)-----------*/
 
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   border: none;
 }
 
@@ -14,9 +14,7 @@
 
 /* Links */
 
-a,
-a:link,
-a:visited {
+a {
   text-decoration: none;
   color: inherit;
 }
@@ -92,6 +90,9 @@ input[type="submit"] {
   background-color: transparent;
   background: none;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 input:focus,
@@ -154,18 +155,18 @@ legend {
 
 html,
 body {
-  font-family: "MuseoSansCyrl", "sans-serif";
+  font-family: "MuseoSansCyrl", sans-serif;
   font-weight: 300;
   line-height: 1;
   color: #fff;
 
   height: 100vh;
+  scroll-behavior: smooth;
 
   background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  overflow: hidden;
 }
 
 body::after {
@@ -193,7 +194,7 @@ body::after {
 /*-----------3. HEADER (START)-----------*/
 
 .header {
-  padding: 0px var(--global-padding);
+  padding: 0px var(--padding-global);
 
   background-color: rgba(21, 10, 1, 0.212);
 
@@ -212,9 +213,6 @@ body::after {
 
   border-left: 1px solid rgba(152, 147, 147, 0.212);
   border-right: 1px solid rgba(152, 147, 147, 0.212);
-}
-
-.logo__img {
 }
 
 .logo__angle {
@@ -253,7 +251,7 @@ body::after {
   line-height: 1.375;
   letter-spacing: -0.615px;
 
-  transition: 0.3s ease-in;
+  transition: color 0.3s ease-in;
 }
 
 .header__link:hover {
@@ -271,7 +269,7 @@ body::after {
 
   border-bottom: 1px solid #3d3d3d;
 
-  transition: 0.3s ease-in;
+  transition: opacity 0.3s ease-in;
 }
 .header__link:hover::after {
   opacity: 1;
@@ -283,7 +281,7 @@ body::after {
 
 :root {
   --index: calc(1vh + 1vw);
-  --global-padding: calc(var(--index) * 14.534883);
+  --padding-global: calc(var(--index) * 14.534883);
   --diameter: calc(var(--index) * 15);
 }
 
@@ -294,8 +292,8 @@ body::after {
 .main {
   height: calc(var(--index) * 21.705426);
 
-  padding-left: var(--global-padding);
-  padding-right: var(--global-padding);
+  padding-left: var(--padding-global);
+  padding-right: var(--padding-global);
 }
 
 /*-----------5. MAIN (END)-----------*/
@@ -430,7 +428,7 @@ body::after {
 @media (max-width: 1600px) {
   :root {
     font-size: 14px;
-    --global-padding: calc(var(--index) * 12);
+    --padding-global: calc(var(--index) * 12);
   }
 
   .logo {
@@ -445,7 +443,7 @@ body::after {
 @media (max-width: 1440px) {
   :root {
     font-size: 12px;
-    --global-padding: calc(var(--index) * 10);
+    --padding-global: calc(var(--index) * 10);
   }
 
   .logo img {
@@ -459,7 +457,7 @@ body::after {
 
 @media (max-width: 1024px) {
   :root {
-    --global-padding: calc(var(--index) * 3);
+    --padding-global: calc(var(--index) * 3);
   }
 
   .hero {
@@ -470,7 +468,7 @@ body::after {
 @media (max-width: 768px) {
   :root {
     font-size: 10px;
-    --global-padding: calc(var(--index) * 1);
+    --padding-global: calc(var(--index) * 1);
   }
 
   .hero {
@@ -503,7 +501,7 @@ body::after {
 
 @media (max-width: 480px) {
   :root {
-    --global-padding: calc(var(--index) * 4);
+    --padding-global: calc(var(--index) * 4);
   }
 
   .hero__left {
